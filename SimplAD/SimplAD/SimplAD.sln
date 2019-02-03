@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalTI", "PortalTI\PortalTI.csproj", "{5ADAECF4-CE14-4187-9BEF-254FA7F4DE7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{320E7C3A-9E07-4747-8975-86E33F81C0F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulator", "Simulator\Simulator.csproj", "{3E70F876-065D-44E4-A562-5ACC19EFD069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{131F0CA8-B653-4C37-A8D6-457F93CBDC69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ADAECF4-CE14-4187-9BEF-254FA7F4DE7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ADAECF4-CE14-4187-9BEF-254FA7F4DE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ADAECF4-CE14-4187-9BEF-254FA7F4DE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ADAECF4-CE14-4187-9BEF-254FA7F4DE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320E7C3A-9E07-4747-8975-86E33F81C0F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320E7C3A-9E07-4747-8975-86E33F81C0F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320E7C3A-9E07-4747-8975-86E33F81C0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320E7C3A-9E07-4747-8975-86E33F81C0F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E70F876-065D-44E4-A562-5ACC19EFD069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E70F876-065D-44E4-A562-5ACC19EFD069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E70F876-065D-44E4-A562-5ACC19EFD069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E70F876-065D-44E4-A562-5ACC19EFD069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{131F0CA8-B653-4C37-A8D6-457F93CBDC69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131F0CA8-B653-4C37-A8D6-457F93CBDC69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131F0CA8-B653-4C37-A8D6-457F93CBDC69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131F0CA8-B653-4C37-A8D6-457F93CBDC69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1726D5A-0E01-44EB-8439-D447CCD7AE4B}
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

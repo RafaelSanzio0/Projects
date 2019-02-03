@@ -1,0 +1,8 @@
+﻿*
+{
+    font-size:16px;
+    font-family: 'Segoe UI';
+}
+body{
+    margin: 0px;
+}

@@ -1,0 +1,113 @@
+﻿
+using Library;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.DirectoryServices;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TreeviewBD
+{
+	public partial class home : System.Web.UI.Page
+	{
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+
+            if (!IsPostBack)
+            {
+                using (DataTable datatable = DataLayer.GetTreeviewCandidate())
+                {
+                    foreach (DataRow dataRow in datatable.Rows)
+                    {
+                         TreeNode parentNode = new TreeNode();
+                         parentNode.Text = dataRow["DepartmentLevel1"].ToString();
+                         parentNode.Value = dataRow["DepartmentLevel1"].ToString()  + "|1";
+                         arvore.Nodes.Add(parentNode
+);
+
+                    }
+
+                }
+
+            }
+        }
+
+        public void ExpandArvore(TreeNode parentNode)
+        {
+            try
+            {
+
+                string[] values = parentNode.Value.Split('|');
+                string departmentLevel = values[0];
+                string level = values[1];
+
+
+                if (level == "1")
+
+                {
+
+                    using (DataTable dataTable1 = DataLayer.GetTreeviewCandidateDP1(departmentLevel))
+                    {
+                        foreach (DataRow dataRow1 in dataTable1.Rows)
+                        {
+                            TreeNode t = new TreeNode();
+                            t.Text = dataRow1["DepartmentLevel2"].ToString();
+                            t.Value = dataRow1["DepartmentLevel2"].ToString() + "|2";
+                            parentNode.ChildNodes.Add(t);
+                        }
+                    }
+                }
+
+                if(level == "2")
+                {
+                    using (DataTable dataTable1 = DataLayer.GetTreeviewCandidateDP2(departmentLevel))
+                    {
+                        foreach (DataRow dataRow1 in dataTable1.Rows)
+                        {
+                            TreeNode t = new TreeNode();
+                            t.Text = dataRow1["DepartmentLevel3"].ToString();
+                            t.Value = dataRow1["DepartmentLevel3"].ToString() + "|3";
+                            parentNode.ChildNodes.Add(t);
+                        }
+                    }
+                }
+
+                if (level == "3")
+                {
+                    using (DataTable dataTable1 = DataLayer.GetTreeviewCandidateDP3(departmentLevel))
+                    {
+                        foreach (DataRow dataRow1 in dataTable1.Rows)
+                        {
+                            TreeNode t = new TreeNode();
+                            t.Text = dataRow1["DepartmentLevel4"].ToString();
+                            t.Value = dataRow1["DepartmentLevel4"].ToString() + "|4";
+                            parentNode.ChildNodes.Add(t);
+                        }
+                    }
+
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+        }
+
+
+        protected void arvore_SelectedNodeChanged(object sender, EventArgs e)
+        {
+            ExpandArvore((sender as TreeView).SelectedNode); //chamada generica
+        }
+
+     
+
+    }
+}

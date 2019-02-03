@@ -1,0 +1,20 @@
+﻿#txt_host, #txt_port {
+    width:30%;
+}
+#Button1 {
+    width: 10%;
+}
+
+#th_ping, #th_admin, #th_telnet, #th_host {
+    font-size: 18px;
+    text-align:center;
+
+}
+
+#td_ping, #td_admin, #td_telnet, #td_host {
+    font-size: 18px;
+    text-align: center;
+}
+#table {
+    border: 1px solid black;
+}
